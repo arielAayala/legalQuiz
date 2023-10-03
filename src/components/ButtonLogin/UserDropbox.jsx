@@ -1,16 +1,37 @@
+import { useState } from "react";
+import ModalStats from "../modalStats/modalStats";
+
 /* eslint-disable react/prop-types */
 function UserDropbox(props) {
-	const { nombre, foto, email, cerrarSesion } = props;
+	const { nombre, foto, cerrarSesion } = props;
+	const [modal, setModal] = useState(false);
 
 	return (
 		<div className="card">
-			<div className="card-border-top"></div>
-			<div className="img">
-				<img src={foto} />
+			<div className="user">
+				<img
+					className="img"
+					src={foto}
+				/>
+				<h3>{nombre}</h3>
 			</div>
-			<span> {nombre}</span>
-			<p className="job"> {email}</p>
-			<button onClick={cerrarSesion}> Cerrar Sesión</button>
+			<div>
+				<button
+					className="cerrarSesion"
+					onClick={cerrarSesion}
+				>
+					Cerrar Sesión
+				</button>
+				<button
+					className="cerrarSesion"
+					onClick={() => {
+						setModal(true);
+					}}
+				>
+					Ver puntajes globales
+				</button>
+			</div>
+			{modal ? <ModalStats setModal={setModal} /> : null}
 		</div>
 	);
 }

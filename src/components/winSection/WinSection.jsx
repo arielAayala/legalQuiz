@@ -7,8 +7,6 @@ import { db } from "../../services/firebase";
 function WinSection({ contrato, puntos, setIniciar, setContrato }) {
 	const { user } = useAuth();
 
-	console.log(user);
-
 	const handleSubmitPuntos = async () => {
 		const docSnap = await getDoc(doc(db, "UserPoint", user.uid));
 		if (docSnap.exists()) {

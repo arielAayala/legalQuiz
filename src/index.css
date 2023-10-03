@@ -14,10 +14,7 @@ body {
 	height: 10px;
 	background: linear-gradient(141deg, cyan 0%, rebeccapurple 40%, deeppink 90%);
 }
-.login {
-	margin-top: 20px;
-	margin-left: 10px;
-}
+
 .container {
 	position: relative;
 	margin: 120px auto 0;
@@ -165,4 +162,12 @@ img {
 
 .button-82-pushable:focus:not(:focus-visible) {
 	outline: none;
+}
+
+.home {
+	padding-bottom: 3em;
+}
+
+.login {
+	margin-bottom: 2em;
 }

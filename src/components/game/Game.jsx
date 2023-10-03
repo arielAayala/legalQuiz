@@ -6,8 +6,10 @@ import { contratos } from "../../json/contratos";
 import { useState } from "react";
 import { useEffect } from "react";
 import Loader from "../loader/Loader";
-import LoseSection from "../loseSection/LoseSection";
+import LoseSection from "../winSection/LoseSection";
 import WinSection from "../winSection/WinSection";
+import AnimationResponse from "../animationResponse/AnimationResponse";
+import AnimationResponseFail from "../animationResponse/AnimationResponseFail";
 
 function Game(props) {
 	const { contrato, setIniciar, setContrato } = props;
@@ -17,6 +19,8 @@ function Game(props) {
 	const [data, setData] = useState(null);
 	const [ayuda, setAyuda] = useState(null);
 	const [terminado, setTerminado] = useState(false);
+	const [animacion, setAnimacion] = useState(false);
+	const [fallo, setFallo] = useState(false);
 
 	useEffect(() => {
 		if (contrato == "Contrato de adhesion") {
@@ -48,11 +52,19 @@ function Game(props) {
 
 	const selectResponse = (response) => {
 		if (response == data.preguntas[pregunta].respuestaCorrecta) {
-			setPuntos(() => puntos + 1);
-			cambiarSiguientePregunta();
+			setAnimacion(true);
+			setTimeout(() => {
+				setPuntos(() => puntos + 1);
+				cambiarSiguientePregunta();
+				setAnimacion(false);
+			}, 700);
 		} else {
-			setVidas(() => vidas - 1);
-			cambiarSiguientePregunta();
+			setFallo(true);
+			setTimeout(() => {
+				setVidas(() => vidas - 1);
+				cambiarSiguientePregunta();
+				setFallo(false);
+			}, 700);
 		}
 	};
 
@@ -91,7 +103,8 @@ function Game(props) {
 					/>
 				))}
 			</div>
-
+			{animacion ? <AnimationResponse /> : null}
+			{fallo ? <AnimationResponseFail /> : null}
 			<QuestionPanel
 				pregunta={data.preguntas[pregunta].pregunta}
 				numero={pregunta}
