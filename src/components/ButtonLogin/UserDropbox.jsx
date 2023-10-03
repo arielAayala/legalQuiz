@@ -11,7 +11,7 @@ function UserDropbox(props) {
 			<div className="user">
 				<img
 					className="img"
-					src={foto}
+					src={foto ?? "./assets/userPhoto.png"}
 				/>
 				<h3>{nombre}</h3>
 			</div>

@@ -204,7 +204,95 @@ const contratos = {
 	},
 	"contrato de alquiler": {
 		tipoContrato: "contrato de alquiler",
-		preguntas: [{}],
+		preguntas: [
+			{
+				pregunta:
+					"¿Cuál es el plazo mínimo para un contrato de alquiler en Argentina?",
+				respuestas: ["6 meses", "2 años", "1 año", "3 años"],
+				respuestaCorrecta: "3 años",
+				infoRespuesta:
+					"El plazo minimo para un contrato de alquiler en Argentina es de 3 años",
+			},
+			{
+				pregunta:
+					"¿Qué tipo de contratos de locación están exentos del plazo mínimo de 3 años?",
+				respuestas: [
+					"Alquileres residenciales únicamente",
+					"Alquileres destinados a embajadas y habitaciones con fines turísticos",
+					"Alquileres comerciales únicamente",
+					"Alquileres para exposiciones en ferias",
+				],
+				respuestaCorrecta: "Alquileres para exposiciones en ferias",
+				infoRespuesta:
+					"Alquiler de espacios o stands temporales comerciales y exposiciones para exhibir productos o servicios a un público específico",
+			},
+			{
+				pregunta:
+					"¿Cuál es el límite máximo de depósito en garantía que un inquilino puede ser requerido a pagar en alquileres residenciales?",
+				respuestas: [
+					"2 meses de alquiler",
+					"3 meses de alquiler",
+					"1 mes de alquiler",
+					"6 meses de alquiler",
+				],
+				respuestaCorrecta: "1 mes de alquiler",
+				infoRespuesta:
+					"El arrendamiento de una propiedad o espacio se establece por un período de un mes",
+			},
+			{
+				pregunta:
+					"¿Cuál de las siguientes NO es una opción de garantía que un inquilino puede ofrecer en un contrato de alquiler en Argentina?",
+				respuestas: [
+					"Título de propiedad inmueble",
+					"Seguro de automóvil",
+					"Aval bancario",
+					"Seguro de caución",
+				],
+				respuestaCorrecta: "Seguro de caución",
+				infoRespuesta:
+					"Es una póliza que garantiza el cumplimiento de obligaciones contractuales o legales por parte de una de las partes. En caso de incumplimiento, el seguro cubre los perjuicios económicos del beneficiario",
+			},
+			{
+				pregunta:
+					"¿Qué responsabilidad tiene el inquilino en relación con las expensas en un contrato de alquiler?",
+				respuestas: [
+					"Pagar todas las expensas, independientemente de su naturaleza",
+					"Pagar las expensas comunes extraordinarias únicamente",
+					"Pagar las expensas que resulten del uso del inmueble, excluyendo las que gravan la propiedad",
+					"No tiene ninguna responsabilidad con respecto a las expensas",
+				],
+				respuestaCorrecta:
+					"No tiene ninguna responsabilidad con respecto a las expensas",
+				infoRespuesta:
+					"El inquilino no tiene responsabilidad con respecto a las expensas",
+			},
+			{
+				pregunta:
+					"¿Quién es responsable de realizar las reparaciones urgentes en la propiedad de alquiler?",
+				respuestas: [
+					"El inquilino",
+					"El locador",
+					"Un contratista designado por ambas partes",
+					"El abogado del inquilino",
+				],
+				respuestaCorrecta: "El abogado del inquilino",
+				infoRespuesta:
+					"El mediador para realizar reparaciones urgentes en la propiedad alquilada es el abogado del inquilino",
+			},
+			{
+				pregunta:
+					"¿Qué tipo de ajuste se permite en los contratos de alquiler en Argentina?",
+				respuestas: [
+					"Ajuste mensual basado en el IPC solamente",
+					"Ajuste trimestral basado en el IPC y el precio del oro",
+					"Ajuste anual basado en el IPC y el RIPTE",
+					"Ajuste semestral basado en la tasa de inflación internacional",
+				],
+				respuestaCorrecta: "Ajuste anual basado en el IPC y el RIPTE",
+				infoRespuesta:
+					"El ajuste anual de valores o salarios, utilizando el Índice de Precios al Consumidor (IPC) y el Régimen de Promoción de la Empleo (RIPTE) como referencia",
+			},
+		],
 	},
 	"contrato laboral": {
 		tipoContrato: "contrato laboral",
