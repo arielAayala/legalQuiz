@@ -99,7 +99,7 @@ function Game(props) {
 					<img
 						className="vidas"
 						key={i}
-						src="../../../public/assets/vida.png"
+						src="./assets/vida.png"
 					/>
 				))}
 			</div>
