@@ -1,0 +1,12 @@
+.panel__title {
+	line-height: 1;
+	color: white;
+}
+
+.panel__content {
+	background: #fff;
+}
+.panel {
+	text-align: center;
+	font-size: 2em;
+}

@@ -1,0 +1,15 @@
+.loseSection {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.loseSection button {
+	padding: 1em;
+	border-radius: 10px;
+	cursor: pointer;
+}
